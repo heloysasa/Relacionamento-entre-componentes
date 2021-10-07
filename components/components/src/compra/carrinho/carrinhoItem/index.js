@@ -1,15 +1,24 @@
+import {Container, RemoverIcon} from './styled'
 import Cookie from 'js.cookie'
 import {useState} from 'react'
 
 import Contador from '../contador'
-import {Container, RemoverIcon} from './styled'
 
 
 export default function CI(props){
 
-    const [produto, setProduto] = useState(props.info)
+    const [produto, setProduto] = useState(props.infos)
 
-    function alterarQtd (qtd){}
+    function alterarQtd (qtd){
+        setProduto({...produto, qtd});
+
+        props.update(produto.id,qtd)
+    }
+
+
+    function remove() {
+        props.remove(produto.id);
+    }
 
 
 
@@ -22,12 +31,13 @@ export default function CI(props){
     return(
         <Container>
             <div>
-                <img className="capa" src={} alt=""/>
+                <img className="capa" src={produto.imagem} alt=""/>
+            <Contador onChange={alterarQtd} value={produto.qtd}/>
             </div>
-            <div className="titulo"></div>
-            <div className="preco">Preço Unitário <br/></div>
-            <div className="QTD">QTD</div>
-            <div className="remover"></div>
+            <div className="titulo">{produto.titulo}</div>
+            <div className="preco">Preço Unitário <br/>{produto.preco}</div>
+            <div className="QTD">QTD{produto.qtd}</div>
+            <div className="remover"><RemoverIcon onClick={remove}/></div>
         </Container>
     )
 }
