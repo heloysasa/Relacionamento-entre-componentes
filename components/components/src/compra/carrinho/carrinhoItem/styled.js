@@ -31,6 +31,7 @@ const Container = styled.div`
     width: 3em;
     cursor: pointer;
   }
+
 `
 
 const RemoverIcon = styled.img`

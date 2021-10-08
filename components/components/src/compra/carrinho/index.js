@@ -48,7 +48,7 @@ export default function Carrinho(){
             <div className="itens">
                 {produtos.map(item =>
                     <CI key={item.id}
-                    info={item}
+                    infos={item}
                     update={alterarProduto}
                     remove={removerProduto}/>
                     )}
