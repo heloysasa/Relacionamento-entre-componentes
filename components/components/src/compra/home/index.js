@@ -1,6 +1,6 @@
-import {Container} from './styled'
-import Produto from '../produto'
-import { useState } from 'react'
+import {Container} from './styled';
+import Produto from '../produto';
+import { useState } from 'react';
 
 
 export default function Index() {
@@ -45,7 +45,7 @@ export default function Index() {
             <br/>
             <div className="lista-produtos">
                 {produtos.map(item =>
-                    <Produto info={item}/>
+                    <Produto infos={item}/>
                     )}
             </div>
         </Container>

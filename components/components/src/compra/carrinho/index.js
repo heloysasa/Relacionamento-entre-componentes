@@ -1,7 +1,8 @@
-import Container from './styled'
+import {Container} from './styled'
 import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Cookie from 'js-cookie'
+import CI from './carrinhoItem'
 
 
 
