@@ -28,14 +28,14 @@ const Container = styled.div`
   }
 
   .remover img {
-    width: 3em;
+    width: 2.9em;
     cursor: pointer;
   }
 
 `
 
 const RemoverIcon = styled.img`
-  content: url('/assets/images/delete.svg')
+  content: url('/assets/images/deletar.svg')
 `
 
 

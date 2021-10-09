@@ -8,6 +8,8 @@ import Carrinho from './compra/carrinho'
 import DetPro from './compra/detalheProduto'
 import CIt from './compra/carrinho/carrinhoItem'
 import Cont from './compra/carrinho/contador'
+import Conc from './compra/comp/pedidoFinalizado/conclusao'
+import Pedi from './compra/comp/pedidoFinalizado/pedido'
 
 
 
@@ -20,6 +22,8 @@ export default function Routes(){
             <Route path="/carrinho" component={Carrinho}/>
             <Route path="/compra/carrinhoItem" component={CIt}/>
             <Route path="/compra/contador" component={Cont}/>
+            <Route path="/compra/conclusao" component={Conc}/>
+            <Route path="/compra/pedido" component={Pedi}/>
         </Switch>
         </BrowserRouter>
     )

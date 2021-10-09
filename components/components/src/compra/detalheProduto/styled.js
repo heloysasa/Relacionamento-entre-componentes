@@ -38,6 +38,11 @@ const Container = styled.div`
     background-color: #f837b2;
     color: #fff;
     cursor: pointer;
+
+    &:hover{
+      color:#ffcbdb;
+      transition: 0.3s;
+    }
   }
 
   img {

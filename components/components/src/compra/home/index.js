@@ -2,9 +2,6 @@ import {Container} from './styled';
 import Produto from '../produto';
 import { useState } from 'react';
 
-
-import { CarouselConfig } from './config';
-
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -50,15 +47,9 @@ export default function Index() {
             <button onClick={listar}>Listar</button>
             <br/>
             <div className="lista-produtos">
-                <Carousel
-                responsive={CarouselConfig}
-                infinite={true}
-                showdots={true}
-                ContainerClass="carousel-container">
                 {produtos.map(item =>
                     <Produto infos={item}/>
                     )}
-                 </Carousel>
             </div>
         </Container>
     )
